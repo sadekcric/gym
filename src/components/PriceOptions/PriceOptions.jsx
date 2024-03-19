@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PriceOption from "../price.jsx/PriceOption";
+import LineChart from "../LineCart/LineChart";
 
 const PriceOptions = () => {
   const [prices, setPrices] = useState([]);
@@ -20,6 +21,11 @@ const PriceOptions = () => {
         {prices.map((option) => (
           <PriceOption key={option.id} option={option} />
         ))}
+      </div>
+
+      {/* line Cart */}
+      <div>
+        <LineChart />
       </div>
     </div>
   );
